@@ -1,0 +1,93 @@
+:root {
+    --bg: #fff4f7;
+    --card: #ffffff;
+    --text: #1f1f1f;
+    --muted: #666;
+    --pink: #ff4d7d;
+    --pink2: #ff7aa2;
+    --shadow: 0 18px 50px rgba(0,0,0,.12);
+    --radius: 22px;
+  }
+  
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: radial-gradient(circle at top, #ffe1ea, var(--bg));
+    color: var(--text);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  
+  .card {
+    width: min(720px, 100%);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #fff0f5;
+    border: 1px solid rgba(255,77,125,.25);
+    color: #b1003a;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  
+  h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); }
+  .sub { margin: 0 0 18px; color: var(--muted); font-size: 16px; line-height: 1.5; }
+  
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  
+  .btn {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-weight: 700;
+    background: #f3f3f3;
+    color: var(--text);
+    transition: transform .08s ease;
+  }
+  .btn:active { transform: scale(.98); }
+  
+  .btn.yes {
+    background: linear-gradient(135deg, var(--pink), var(--pink2));
+    color: white;
+  }
+  
+  .tiny { margin-top: 16px; font-size: 13px; color: var(--muted); }
+  
+  .gallery {
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,.08);
+  }
+  
+  .plan { display: grid; gap: 12px; margin: 14px 0 18px; }
+  .plan-item {
+    padding: 14px;
+    border-radius: 16px;
+    background: #fff7fa;
+    border: 1px solid rgba(255,77,125,.18);
+  }
+  .plan-item h2 { margin: 0 0 6px; font-size: 18px; }
+  .plan-item p { margin: 0; color: var(--muted); }
+  
