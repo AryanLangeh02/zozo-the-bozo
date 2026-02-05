@@ -90,4 +90,33 @@
   }
   .plan-item h2 { margin: 0 0 6px; font-size: 18px; }
   .plan-item p { margin: 0; color: var(--muted); }
+  /* Floating hearts background */
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: -40px;
+    font-size: 16px;
+    opacity: 0.18;
+    filter: blur(0.2px);
+    animation: floatUp linear infinite;
+  }
+  
+  @keyframes floatUp {
+    from {
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    to {
+      transform: translateY(-110vh) translateX(30px) rotate(25deg);
+    }
+  }
+  
+  /* Make sure your card stays above the background */
+  .card { position: relative; z-index: 1; }
   
